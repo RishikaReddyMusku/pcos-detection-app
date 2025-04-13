@@ -1,0 +1,84 @@
+body{
+  background-color:rgb(244, 207, 207);
+}
+.about-wrapper {
+  
+  padding: 40px;
+  
+
+  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.2); /* soft pink glow */
+  font-family: 'Times New Roman', Times,  sans-serif;
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.3rem;
+}
+
+.about-wrapper h1 {
+  font-size: 3.5rem;
+  color: #d63384; /* dark pink */
+  margin-bottom: 20px;
+  
+  align-items: center;
+  gap: 10px;
+}
+
+.about-wrapper h2 {
+  font-size: 1.8rem;
+  color: #e83e8c; /* mid-pink */
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.intro,
+.mission {
+  font-weight: 500;
+  color: #555;
+}
+
+.highlights {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.highlights li {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.highlights li::before {
+  content: '✔️';
+  margin-right: 10px;
+  color: #e83e8c;
+  font-size: 1.5rem;
+}
+
+.thanks {
+  margin-top: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: #d63384;
+  font-size: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-wrapper {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .about-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .about-wrapper h2 {
+    font-size: 1.5rem;
+  }
+}
+body {
+  overflow-y: scroll;
+}
+

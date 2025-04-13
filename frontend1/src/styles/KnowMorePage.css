@@ -1,0 +1,47 @@
+/* KnowMorePage.css */
+
+.knowmore-wrapper {
+  padding-top: 80px; /* if navbar is fixed */
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #d63384;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.info-section {
+  background-color: #ffd6e8;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 35px;
+  width: 60%;
+  max-width: 700px;
+  min-width: 300px;
+  margin: 20px auto;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.info-section:hover {
+  transform: scale(1.02);
+}
+
+.info-section h2 {
+  font-size: 1.5rem;
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+
+.info-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.info-section li {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
