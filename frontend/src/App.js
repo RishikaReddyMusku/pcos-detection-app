@@ -10,6 +10,7 @@ import UploadDataPage from './pages/UploadDataPage';
 import KnowMorePage from './pages/KnowMorePage';
 import AboutUsPage from './pages/AboutUspage';
 import UserProfilePage from './pages/UserProfilePage';
+import Articlespage from './pages/Articlespage';
 function App() {
   return (
     <UserProvider>
@@ -24,6 +25,7 @@ function App() {
   <Route path="/know-more" element={<KnowMorePage />} />
   <Route path="/about" element={<AboutUsPage />} />
   <Route path="/profile" element={<UserProfilePage />} />
+  <Route path="/articles" element={<Articlespage />}/>
         </Routes>
       </Router>
     </UserProvider>

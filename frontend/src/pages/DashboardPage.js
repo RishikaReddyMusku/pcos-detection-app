@@ -82,7 +82,7 @@ const DashboardPage = () => {
   {showSidebar && (
     <div className="sidebar">
       <Link to="/symptoms">Symptoms</Link>
-      
+      <Link to="/articles">Articles</Link>
       <Link to="/know-more">Know More</Link>
       <Link to="/about">About Us</Link>
     </div>
