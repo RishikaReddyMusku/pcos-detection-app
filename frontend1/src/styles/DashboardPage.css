@@ -22,6 +22,7 @@
   font-size: 2.2rem; /* 🔥 Bigger font size */
   font-weight: bold;
   color: white;
+  align-items: center;
 }
 .navbar-left {
   cursor: pointer;
@@ -130,6 +131,8 @@
   z-index: 0;
 }
 
+
+
 .vertical-quote {
   position: absolute;
   width: 180px;
@@ -147,6 +150,7 @@
   text-align: center;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  
 }
 
 .left-vertical-quote {

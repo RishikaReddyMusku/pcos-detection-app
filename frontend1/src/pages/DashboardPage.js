@@ -82,7 +82,7 @@ const DashboardPage = () => {
   {showSidebar && (
     <div className="sidebar">
       <Link to="/symptoms">Symptoms</Link>
-      <Link to="/upload">Upload Data</Link>
+      
       <Link to="/know-more">Know More</Link>
       <Link to="/about">About Us</Link>
     </div>
@@ -104,6 +104,7 @@ const DashboardPage = () => {
       This platform aims to empower women with the tools, knowledge, and community support
       to navigate PCOS with strength and clarity.
     </p>
+    
     <div className="pcos-detection-box">
   <h2>Detect PCOS Easily</h2>
   <p>
