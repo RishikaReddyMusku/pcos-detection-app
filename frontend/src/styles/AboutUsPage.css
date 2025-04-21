@@ -1,11 +1,13 @@
-body{
-  background-color:rgb(244, 207, 207);
-}
-.about-wrapper {
-  
-  padding: 40px;
-  
 
+.about-wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin: auto;
+  padding: 40px;
+  max-width: 1200px;
+  
+  background-color:  rgb(253, 207, 215);
+border-radius: 25px;
   box-shadow: 0 4px 20px rgba(255, 105, 180, 0.2); /* soft pink glow */
   font-family: 'Times New Roman', Times,  sans-serif;
   color: #555;

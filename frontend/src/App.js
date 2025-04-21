@@ -14,7 +14,7 @@ import UploadScanPage from './pages/UploadScanPage';
 import ClinicalQuestionsPage from './pages/ClinicalQuestionsPage';
 import SymptomCheckerPage from './pages/SymptomCheckerPage';
 import RequireAuth from './components/RequireAuth';
-
+import Articlespage from './pages/Articlespage';
 function App() {
   return (
     <UserProvider>
@@ -33,6 +33,7 @@ function App() {
 <Route path="/upload-scan" element={<RequireAuth><UploadScanPage /></RequireAuth>} />
 <Route path="/clinical-questions" element={<RequireAuth><ClinicalQuestionsPage /></RequireAuth>} />
 
+  <Route path="/articles" element={<Articlespage />}/>
         </Routes>
       </Router>
     </UserProvider>
