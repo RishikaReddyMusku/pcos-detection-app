@@ -10,6 +10,10 @@ import UploadDataPage from './pages/UploadDataPage';
 import KnowMorePage from './pages/KnowMorePage';
 import AboutUsPage from './pages/AboutUspage';
 import UserProfilePage from './pages/UserProfilePage';
+import UploadScanPage from './pages/UploadScanPage';
+import ClinicalQuestionsPage from './pages/ClinicalQuestionsPage';
+import SymptomCheckerPage from './pages/SymptomCheckerPage';
+import RequireAuth from './components/RequireAuth';
 import Articlespage from './pages/Articlespage';
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
   <Route path="/know-more" element={<KnowMorePage />} />
   <Route path="/about" element={<AboutUsPage />} />
   <Route path="/profile" element={<UserProfilePage />} />
+  <Route path="/symptom-checker" element={<RequireAuth><SymptomCheckerPage /></RequireAuth>} />
+<Route path="/upload-scan" element={<RequireAuth><UploadScanPage /></RequireAuth>} />
+<Route path="/clinical-questions" element={<RequireAuth><ClinicalQuestionsPage /></RequireAuth>} />
+
   <Route path="/articles" element={<Articlespage />}/>
         </Routes>
       </Router>

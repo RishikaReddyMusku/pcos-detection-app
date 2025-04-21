@@ -1,0 +1,78 @@
+/* src/styles/UploadScanPage.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f7d9e3, #ffe1f0);
+}
+
+.upload-scan-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 2.5rem;
+  background: #fff9fc;
+  border-radius: 24px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.upload-scan-container h2 {
+  font-size: 1.8rem;
+  color: #d63384;
+  margin-bottom: 30px;
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  background-color: #f8d7e8;
+  color: #861f41;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.file-label:hover {
+  background-color: #f0c1d9;
+}
+
+.preview-box {
+  border: 2px dashed #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  max-width: 100%;
+}
+
+.preview-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff85c1;
+}
