@@ -1,0 +1,68 @@
+/* Page background - soft pink */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe6f0; /* light pastel pink */
+}
+
+/* Form container - white card */
+.register-container {
+ margin-top: 60px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 460px;
+  height:450px;
+  display: flex;
+  text-align: center;
+}
+
+/* Heading */
+.register-container h2 {
+  font-size: 28px;
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+/* Input styling */
+.register-container input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #f3c6d9;
+  font-size: 16px;
+}
+
+/* Button styling */
+.register-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d63384;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+  background-color: #bf2c76;
+}
+
+/* Sign-in link */
+.register-container p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.register-container a {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -1,0 +1,228 @@
+/* .symptom-checker-container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 2.5rem;
+  background: #fffdfc;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.symptom-checker-container h2 {
+  text-align: center;
+  color: #c2185b;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.symptom-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+  align-items: center;
+}
+
+.symptom-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.symptom-form select,
+.symptom-form input {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: border 0.2s ease;
+}
+
+.symptom-form select:focus,
+.symptom-form input:focus {
+  border-color: #7b1fa2;
+  outline: none;
+}
+
+.symptom-form button {
+  grid-column: span 2;
+  padding: 14px;
+  background-color: #7b1fa2;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.symptom-form button:hover {
+  background-color: #6a1b9a;
+} */
+
+
+.symptom-checker-container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 2.5rem;
+  background-color: #fffdfc;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.symptom-checker-container h2 {
+  text-align: center;
+  color: #c2185b;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.symptom-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+  align-items: center;
+}
+
+.symptom-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.symptom-form select,
+.symptom-form input {
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: border 0.2s ease;
+}
+
+.symptom-form select:focus,
+.symptom-form input:focus {
+  border-color: #c2185b;
+  outline: none;
+}
+.button-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px; /* Adds space between the buttons */
+}
+.button-container button {
+  flex: 1;
+}
+
+.symptom-form button {
+  grid-column: span 2;
+  padding: 14px;
+  background-color: #c2185b;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.symptom-form button:hover {
+  background-color: #ad1457;
+}
+
+.recommendations {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+
+.recommendations h3 {
+  color: #6a1b9a;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.test-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.test-card {
+  background-color: #fbeff5;
+  padding: 18px;
+  border-left: 6px solid #c2185b;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.test-card:hover {
+  transform: scale(1.02);
+}
+
+.test-card h4 {
+  margin-bottom: 6px;
+  color: #6a1b9a;
+  font-size: 1.1rem;
+}
+
+.test-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.test-card em {
+  color: #5d4037;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+.lifestyle-tips {
+  background-color: #fbeff5;
+  padding: 18px;
+  border-left: 6px solid #c2185b;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.lifestyle-tips:hover {
+  transform: scale(1.02);
+}
+
+.lifestyle-tips h4 {
+  margin-bottom: 6px;
+  color: #6a1b9a;
+  font-size: 1.1rem;
+}
+
+.lifestyle-tips ul {
+  padding-left: 20px;
+}
+
+.lifestyle-tips ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #444;
+}
