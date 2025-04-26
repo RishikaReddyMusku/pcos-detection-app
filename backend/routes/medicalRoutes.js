@@ -3,21 +3,10 @@ const express = require('express');
 const router = express.Router();
 const MedicalForm = require('../models/MedicalForm');
 const requireAuth = require('../middleware/requireAuth');
+const { submitMedicalForm } = require('../controllers/medicalController');
 
 // Submit medical form (protected route)
-router.post('/', requireAuth, async (req, res) => {
-  try {
-    const form = new MedicalForm({
-      user: req.user._id,
-      ...req.body
-    });
-
-    await form.save();
-    res.status(201).json({ message: 'Medical form submitted successfully', form });
-  } catch (err) {
-    res.status(500).json({ error: 'Server error' });
-  }
-});
+router.post('/', requireAuth, submitMedicalForm);
 
 // Get logged-in user's latest medical form
 router.get('/me', requireAuth, async (req, res) => {
@@ -29,5 +18,17 @@ router.get('/me', requireAuth, async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });
+// Add this in medicalroutes.js
+router.put('/:id', requireAuth, async (req, res) => {
+  try {
+    const updatedForm = await MedicalForm.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!updatedForm) return res.status(404).json({ message: 'Medical form not found' });
+
+    res.json(updatedForm);
+  } catch (err) {
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 
 module.exports = router;

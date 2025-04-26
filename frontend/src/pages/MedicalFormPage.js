@@ -13,7 +13,6 @@ const MedicalFormPage = () => {
     name: '',
     dob: '',
     age: '',
-    gender: '',
     mobile: '',
     email: '',
     bloodGroup: '',
@@ -115,23 +114,7 @@ const MedicalFormPage = () => {
             );
           }
 
-          if (key === 'gender') {
-            return (
-              <select
-                key={key}
-                name={key}
-                value={value}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Select Gender</option>
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-                <option value="Other">Other</option>
-              </select>
-            );
-          }
-
+          
           if (key === 'bloodGroup') {
             return (
               <select

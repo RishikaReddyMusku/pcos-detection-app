@@ -10,7 +10,6 @@ const MedicalFormSchema = new mongoose.Schema({
   name: { type: String, required: true },
   dob: { type: String, required: true },
   age: { type: String, required: true },
-  gender: { type: String, required: true },
   mobile: { type: String, required: true },
   email: { type: String, required: true },
   bloodGroup: { type: String, required: true },
