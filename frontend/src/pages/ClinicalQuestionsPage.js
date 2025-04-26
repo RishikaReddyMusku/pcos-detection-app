@@ -356,7 +356,7 @@ const ClinicalQuestionsPage = () => {
         </fieldset>
 
         <fieldset>
-          <legend>👩‍⚕️ Lifestyle & Symptoms</legend>
+          <legend>🧘 Lifestyle & Symptoms</legend>
           <div className="form-grid">
             <label>
               Marriage Status (Yrs)
@@ -377,10 +377,12 @@ const ClinicalQuestionsPage = () => {
         </fieldset>
 
         <div className="button-group">
-    <button type="submit" className="submit-btn">🚀 Submit Clinical Data</button>
-    <button type="button" className="submit-btn" onClick={handleClear}>🧹 Clear</button>
-    <button type="button" className="submit-btn" onClick={handleSampleTest}>🧪 Sample Test</button>
+  <button type="submit" className="submit-btn">🚀 Submit Clinical Data</button>
+  <button type="button" className="submit-btn" onClick={handleClear}>🧹 Clear</button>
+  <button type="button" className="hidden-sample-btn" onClick={handleSampleTest}>🧪 Sample Test</button>
 </div>
+
+
 
       </form>
 
