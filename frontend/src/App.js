@@ -15,6 +15,8 @@ import ClinicalQuestionsPage from './pages/ClinicalQuestionsPage';
 import SymptomCheckerPage from './pages/SymptomCheckerPage';
 import RequireAuth from './components/RequireAuth';
 import Articlespage from './pages/Articlespage';
+import './App.css';
+
 function App() {
   return (
     <UserProvider>
