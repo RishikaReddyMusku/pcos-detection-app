@@ -4,8 +4,10 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #f7d9e3, #ffe1f0);
+  min-height: 100vh;
 }
 
+/* Container */
 .upload-scan-container {
   max-width: 500px;
   margin: 60px auto;
@@ -14,6 +16,7 @@ body {
   border-radius: 24px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .upload-scan-container h2 {
@@ -22,6 +25,7 @@ body {
   margin-bottom: 30px;
 }
 
+/* Upload section layout */
 .upload-section {
   display: flex;
   flex-direction: column;
@@ -29,10 +33,12 @@ body {
   align-items: center;
 }
 
+/* Hidden file input */
 input[type="file"] {
   display: none;
 }
 
+/* Upload button label */
 .file-label {
   display: inline-block;
   background-color: #f8d7e8;
@@ -48,20 +54,24 @@ input[type="file"] {
   background-color: #f0c1d9;
 }
 
-.preview-box {
-  border: 2px dashed #ccc;
+/* Preview container */
+.preview-box,
+img.w-full {
+  border: 2px dashed #e3c3d9;
   padding: 10px;
   border-radius: 10px;
   background-color: #fff;
   max-width: 100%;
+  box-shadow: 0 4px 8px rgba(134, 31, 65, 0.1);
+  transition: transform 0.3s ease;
+  
 }
 
-.preview-box img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+img.w-full:hover {
+  transform: scale(1.02);
 }
 
+/* Upload button */
 button {
   background-color: #ff69b4;
   color: white;
@@ -75,4 +85,42 @@ button {
 
 button:hover {
   background-color: #ff85c1;
+}
+
+/* Result Box */
+.result-box {
+  margin-top: 30px;
+  background-color: #ffe1f0;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(214, 51, 132, 0.1);
+  text-align: left;
+  width: 100%;
+}
+
+.result-box h3 {
+  margin-bottom: 10px;
+  color: #c2185b;
+}
+
+.result-box p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #5c0036;
+}
+
+
+.preview-box {
+  max-width: 300px;      /* or whatever fits your layout */
+  max-height: 300px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.preview-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* or "cover" if you want it to fill the box */
 }

@@ -106,10 +106,10 @@ const UserProfilePage = () => {
   <br></br>
     <h2>📁 Uploaded Scans</h2>
     <div className="scans-wrapper">
-      {scans.map((scan, i) => (
+      {scans.map((file, i) => (
         <div key={i} className="scan-preview">
-          <img src={`http://localhost:5000/${scan.filePath}`} alt={`Scan ${i}`} />
-          <p>{scan.fileName}</p>
+          <img src={`http://localhost:5000/${file.filePath}`} alt={`Scan ${i}`} />
+          <p>{file.fileName}</p>
         </div>
       ))}
     </div>

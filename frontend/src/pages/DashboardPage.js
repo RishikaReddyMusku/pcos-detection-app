@@ -79,14 +79,25 @@ const DashboardPage = () => {
  
 
   {/* Sidebar */}
-  {showSidebar && (
+  {/* {showSidebar && (
     <div className="sidebar">
       <Link to="/symptoms">Symptoms</Link>
       <Link to="/articles">Articles</Link>
       <Link to="/know-more">Know More</Link>
       <Link to="/about">About Us</Link>
     </div>
-  )}
+  )} */}
+
+{showSidebar && (
+  <div className="sidebar">
+    <div style={{ alignSelf: 'flex-end', cursor: 'pointer', marginBottom: '10px' }} onClick={toggleSidebar}>❌</div>
+    <Link to="/symptoms">🌸 Track Symptoms</Link>
+    <Link to="/articles">📚 Read Articles</Link>
+    <Link to="/know-more">💡 Know More</Link>
+    <Link to="/about">👩‍⚕️ About Us</Link>
+  </div>
+)}
+
 
 
   {/* Main Info Section */}

@@ -57,7 +57,7 @@
 }
 
 .submit-btn {
-  background: #007bff;
+  background: #c2185b;
   color: white;
   font-weight: bold;
   padding: 0.9rem 2rem;
@@ -70,7 +70,7 @@
 }
 
 .submit-btn:hover {
-  background: #0056b3;
+  background: #f49fc1;
 }
 
 .clinical-form select,
@@ -91,3 +91,43 @@ label {
 }
 
 
+.prediction-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.prediction-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #6a1b9a; /* Deep lavender */
+}
+
+.prediction-message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* PCOS Detected - Soft rose theme */
+.pcos-yes {
+  background-color: #ffe6e9; /* Soft rose */
+  border: 2px solid #f48fb1;
+  color: #ad1457;
+}
+
+/* PCOS Not Detected - Calm mint theme */
+.pcos-no {
+  background-color: #e3fcec; /* Mint green */
+  border: 2px solid #81c784;
+  color: #1b5e20;
+}

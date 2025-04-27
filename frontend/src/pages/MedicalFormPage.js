@@ -53,6 +53,13 @@ const MedicalFormPage = () => {
           Authorization: `Bearer ${token}`
         }
       });
+      localStorage.setItem('medicalProfile', JSON.stringify({
+        age: formData.age,
+        height: formData.height,
+        weight: formData.weight,
+        bloodGroup: formData.bloodGroup
+      }));
+      
 
       console.log('Form submitted:', response.data);
       navigate('/dashboard');

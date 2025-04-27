@@ -36,4 +36,8 @@ exports.submitSymptoms = async (req, res) => {
     console.error('Error saving symptoms:', error);
     res.status(500).json({ error: 'Failed to save symptoms' });
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> akshitha_branch
