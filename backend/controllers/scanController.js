@@ -55,8 +55,4 @@ exports.uploadScan = async (req, res) => {
     console.error('❌ Error saving scan:', error);
     res.status(500).json({ error: 'Failed to upload scan' });
   }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> akshitha_branch
