@@ -1,3 +1,4 @@
+
 const Clinical = require('../models/Clinical');
 
 exports.submitClinical = async (req, res) => {
@@ -23,8 +24,4 @@ exports.submitClinical = async (req, res) => {
     console.error('Error saving clinical data:', error);
     res.status(500).json({ error: 'Failed to save clinical data' });
   }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> akshitha_branch
