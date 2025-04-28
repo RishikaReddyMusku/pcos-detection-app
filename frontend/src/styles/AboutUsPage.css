@@ -1,86 +1,55 @@
-
 .about-wrapper {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin: auto;
-  padding: 40px;
-  max-width: 1200px;
-  
-  background-color:  rgb(253, 207, 215);
-border-radius: 25px;
-  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.2); /* soft pink glow */
-  font-family: 'Times New Roman', Times,  sans-serif;
-  color: #555;
-  line-height: 1.7;
-  font-size: 1.3rem;
-}
-
-.about-wrapper h1 {
-  font-size: 3.5rem;
-  color: #d63384; /* dark pink */
-  margin-bottom: 20px;
-  
-  align-items: center;
-  gap: 10px;
-}
-
-.about-wrapper h2 {
-  font-size: 1.8rem;
-  color: #e83e8c; /* mid-pink */
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
-.intro,
-.mission {
-  font-weight: 500;
-  color: #555;
-}
-
-.highlights {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 15px;
-}
-
-.highlights li {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
+  min-height: 100vh;
+  padding: 50px 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb; /* Light background */
+  color: #333; /* Dark text for contrast */
+}
+
+.about-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+}
+
+.about-image {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.highlights li::before {
-  content: '✔️';
-  margin-right: 10px;
-  color: #e83e8c;
-  font-size: 1.5rem;
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.thanks {
-  margin-top: 30px;
-  font-style: italic;
-  font-weight: bold;
-  color: #d63384;
+h1, h2 {
+  margin-bottom: 20px;
   font-size: 2rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-wrapper {
-    padding: 20px;
-    margin: 20px;
-  }
-
-  .about-wrapper h1 {
-    font-size: 2rem;
-  }
-
-  .about-wrapper h2 {
-    font-size: 1.5rem;
-  }
-}
-body {
-  overflow-y: scroll;
+ul.highlights {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.thanks {
+  font-weight: bold;
+}

@@ -72,6 +72,33 @@
 .submit-btn:hover {
   background: #f49fc1;
 }
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hidden-sample-btn {
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  color: #888;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  align-self: flex-end;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.hidden-sample-btn:hover {
+  opacity: 1;
+  background: #e0e0e0;
+}
+
+
 
 .clinical-form select,
 .clinical-form input[type="text"],

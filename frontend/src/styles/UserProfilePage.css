@@ -51,4 +51,186 @@
     border-radius: 8px;
   }
   
+  .edit-field {
+    margin-bottom: 10px;
+  }
+  
+  .edit-field input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  .edit-button, .save-button, .cancel-button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cancel-button {
+    background-color: #f44336;
+  }
+  
+  .edit-button:hover, .save-button:hover, .cancel-button:hover {
+    opacity: 0.8;
+  }
+  .delete-button {
+    margin-top: 5px;
+    padding: 6px 10px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #d9363e;
+  }
+  .clickable-scan {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .clickable-scan:hover {
+    transform: scale(1.05);
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    position: relative;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: #f44336;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background: #d32f2f;
+  }
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffc0cb; /* Light pink */
+    color: white;
+    border: none;
+    font-size: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: background 0.3s;
+  }
+  
+  .nav-button.left {
+    left: 10px;
+  }
+  
+  .nav-button.right {
+    right: 10px;
+  }
+  
+  .nav-button:hover {
+    background: #ff69b4; /* Hot pink on hover */
+  }
+  
+
+  .scan-wrapper {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .scan-image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .delete-icon-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .scan-image-container:hover .delete-icon-button {
+    display: block;
+  }
+  
+  .delete-icon-button:hover {
+    background-color: #ff4d6d; /* pinkish */
+    color: white;
+  }
+  .medical-form-card {
+    position: relative;
+  }
+  
+  .edit-icon-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+    transition: background 0.3s;
+  }
+  
+  .edit-icon-button:hover {
+    background-color: #ff69b4; /* Light pink hover */
+    color: white;
+  }
+  
+  
+  
+  
   

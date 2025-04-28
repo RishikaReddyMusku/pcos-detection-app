@@ -55,19 +55,36 @@
   margin-top: 30px;
 }
 
+.icon {
+  margin-right: 8px;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+/* For black icons (intro section) */
+.black-icon {
+  color: black;
+}
+
+/* For blue icons (upload options) */
+.blue-icon {
+  color: #4A90E2; /* Nice medical soft blue */
+}
+
+/* Make the upload options interactive on hover */
 .option-card {
-  background-color: #ffe0ec;
-  border: 2px solid #f5b5cd;
-  border-radius: 15px;
-  padding: 25px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.8); /* light card background */
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .option-card:hover {
-  background-color: #f2acc2;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
+
 
 .option-card h3 {
   font-size: 1.5rem;
