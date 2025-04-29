@@ -3,13 +3,10 @@ import React, { useState } from 'react';
 import axios from '../api/axios';
 import '../styles/UploadScanPage.css';
 
-
-
 const UploadScanPage = () => {
   const [scan, setScan] = useState(null);
   const [preview, setPreview] = useState(null);
   const [prediction, setPrediction] = useState(null);
-  const [confidence, setConfidence] = useState(null);
   const [loading, setLoading] = useState(false);
   const [showRedirectMessage, setShowRedirectMessage] = useState(false);
 
@@ -20,7 +17,6 @@ const UploadScanPage = () => {
     if (file) {
       setPreview(URL.createObjectURL(file));
       setPrediction(null); // reset on new upload
-      setConfidence(null);
     }
   };
 
@@ -32,8 +28,9 @@ const UploadScanPage = () => {
 
     const formData = new FormData();
     formData.append('file', scan);
-    const formData1=new FormData();
-    formData1.append('scan',scan);
+    const formData1 = new FormData();
+    formData1.append('scan', scan);
+
     try {
       await axios.post('/scan/upload', formData1);
       alert('Scan uploaded successfully!');
@@ -44,13 +41,9 @@ const UploadScanPage = () => {
     try {
       setLoading(true);
       const response = await axios.post('http://localhost:5001/predict', formData);
-     
 
-      // Get prediction from the response
-      const { prediction, confidence } = response.data;
-
+      const { prediction } = response.data;  // Only using prediction
       setPrediction(prediction === 0 ? 'PCOS Detected' : 'Normal');
-      setConfidence((confidence * 100).toFixed(2)); // Convert to %
     } catch (err) {
       console.error('Upload failed:', err);
       alert('Upload failed');
@@ -65,7 +58,6 @@ const UploadScanPage = () => {
 
       <div className="upload-section">
         <label htmlFor="scanInput" className="file-label">
-          {/* {scan ? scan.name : 'Choose a file'} */}
           Choose a file
         </label>
         <input
@@ -90,7 +82,6 @@ const UploadScanPage = () => {
           <div className="result-box">
             <h3>🔍 Result:</h3>
             <p><strong>Prediction:</strong> {prediction}</p>
-            <p><strong>Confidence:</strong> {confidence}%</p>
           </div>
         )}
       </div>

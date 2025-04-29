@@ -1,11 +1,14 @@
 const Clinical = require('../models/Clinical');
 
+// Submit clinical data (overwrites previous)
 exports.submitClinical = async (req, res) => {
   const userId = req.user.id;
+
   const { medicalProfile, bloodTest, reproductiveHealth, bodyMetrics, lifestyleAndSymptoms } = req.body;
 
   try {
     await Clinical.deleteMany({ userId });
+
 
     const clinical = new Clinical({
       userId,
@@ -14,6 +17,7 @@ exports.submitClinical = async (req, res) => {
       reproductiveHealth,
       bodyMetrics,
       lifestyleAndSymptoms 
+
     });
 
     await clinical.save();
@@ -23,3 +27,4 @@ exports.submitClinical = async (req, res) => {
     res.status(500).json({ error: 'Failed to save clinical data' });
   }
 };
+
