@@ -17,8 +17,12 @@ const AboutUsPage = () => {
             Our mission is to create an AI-driven platform that provides women with the tools to better understand and manage their reproductive health. By bridging technology with healthcare, we aim to facilitate early detection and self-awareness of PCOS.
           </p>
 
+          <div className="about-image">
+            <img src={teamworkImage} alt="Teamwork" />
+          </div>
+
           <h2>Why PCOS Matters</h2>
-          <p>
+          <p className="pcos-info">
             Polycystic Ovary Syndrome (PCOS) is a common hormonal disorder, yet many women are unaware of its impact until later in life. Our platform promotes early self-checks, empowering women to take proactive steps in their health journey.
           </p>
 
@@ -34,9 +38,6 @@ const AboutUsPage = () => {
           <p className="thanks">
             Thank you for exploring our platform. We are committed to advancing women's health with technology and awareness.
           </p>
-        </div>
-        <div className="about-image">
-          <img src={teamworkImage} alt="Teamwork" />
         </div>
       </div>
     </div>
