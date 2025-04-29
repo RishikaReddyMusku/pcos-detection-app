@@ -152,26 +152,24 @@ const UserProfilePage = () => {
 
 
       {/* Clinical Info */}
-      {clinicalData.length > 0 && (
+      {clinicalData && (
   <>
-  <br></br>
     <h2>🧬 Clinical Information</h2>
-    {clinicalData.map((entry, i) => (
-      <div key={i} className="profile-card">
-        {Object.entries(entry.bloodTest || {}).map(([key, value]) => (
-          <p key={key}><strong>{key}:</strong> {value}</p>
-        ))}
-        {Object.entries(entry.reproductiveHealth || {}).map(([key, value]) => (
-          <p key={key}><strong>{key}:</strong> {value}</p>
-        ))}
-        {Object.entries(entry.bodyMetrics || {}).map(([key, value]) => (
-          <p key={key}><strong>{key}:</strong> {value}</p>
-        ))}
-        {Object.entries(entry.lifestyleAndSymptoms || {}).map(([key, value]) => (
-          <p key={key}><strong>{key}:</strong> {value}</p>
-        ))}
-      </div>
-    ))}
+    <div className="profile-card">
+
+      {Object.entries(clinicalData.bloodTest || {}).map(([key, value]) => (
+        <p key={key}><strong>{key}:</strong> {value}</p>
+      ))}
+      {Object.entries(clinicalData.reproductiveHealth || {}).map(([key, value]) => (
+        <p key={key}><strong>{key}:</strong> {value}</p>
+      ))}
+      {Object.entries(clinicalData.bodyMetrics || {}).map(([key, value]) => (
+        <p key={key}><strong>{key}:</strong> {value}</p>
+      ))}
+      {Object.entries(clinicalData.lifestyleAndSymptoms || {}).map(([key, value]) => (
+        <p key={key}><strong>{key}:</strong> {value}</p>
+      ))}
+    </div>
   </>
 )}
 

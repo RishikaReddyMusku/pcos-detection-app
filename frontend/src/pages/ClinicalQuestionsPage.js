@@ -179,7 +179,6 @@ import '../styles/ClinicalQuestionsPage.css';
 
 const ClinicalQuestionsPage = () => {
   const [prediction, setPrediction] = useState(null);
-
   const [medicalData, setMedicalData] = useState({
     age: '', height: '', weight: '', bloodGroup: ''
   });
@@ -262,7 +261,7 @@ const ClinicalQuestionsPage = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://127.0.0.1:5000/clinical/submit', payload, {
+      const response = await axios.post('http://localhost:5000/clinical/submit', payload, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`
@@ -377,8 +376,8 @@ const ClinicalQuestionsPage = () => {
         </fieldset>
 
         <div className="button-group">
-  <button type="submit" className="submit-btn">🚀 Submit Clinical Data</button>
-  <button type="button" className="submit-btn" onClick={handleClear}>🧹 Clear</button>
+  <button type="submit" className="submit-btn"> Submit </button>
+  <button type="button" className="submit-btn" onClick={handleClear}> Clear</button>
   <button type="button" className="hidden-sample-btn" onClick={handleSampleTest}>🧪 Sample Test</button>
 </div>
 
@@ -396,7 +395,7 @@ const ClinicalQuestionsPage = () => {
           </p>
         </div>
       )}
-    </div>
+ </div>
   );
 };
 

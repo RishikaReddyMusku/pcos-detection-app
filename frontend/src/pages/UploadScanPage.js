@@ -11,6 +11,8 @@ const UploadScanPage = () => {
   const [prediction, setPrediction] = useState(null);
   const [confidence, setConfidence] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [showRedirectMessage, setShowRedirectMessage] = useState(false);
+
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -83,8 +85,8 @@ const UploadScanPage = () => {
           {loading ? 'Uploading & Predicting...' : 'Upload & Predict'}
         </button>
 
-        {/* Display result */}
-        {prediction && (
+       {/* Display result */}
+       {prediction && (
           <div className="result-box">
             <h3>🔍 Result:</h3>
             <p><strong>Prediction:</strong> {prediction}</p>
