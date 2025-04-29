@@ -17,12 +17,15 @@ app.use(express.json());
 
 
 
+
+
 // Route files
 const scanRoutes = require('./routes/scanRoutes');
 const clinicalRoutes = require('./routes/clinicalRoutes');
 const symptomsRoutes = require('./routes/symptomsRoutes');
 const authRoutes = require('./routes/auth');
 const medicalRoutes = require('./routes/medicalRoutes');
+
 
 // Register Routes
 app.use('/symptoms', require('./routes/symptomsRoutes'));
