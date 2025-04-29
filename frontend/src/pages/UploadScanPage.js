@@ -88,7 +88,6 @@ const UploadScanPage = () => {
           <div className="result-box">
             <h3>🔍 Result:</h3>
             <p><strong>Prediction:</strong> {prediction}</p>
-            <p><strong>Confidence:</strong> {confidence}%</p>
           </div>
         )}
       </div>
