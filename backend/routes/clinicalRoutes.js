@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { submitClinical, getMyClinicalData } = require('../controllers/clinicalController');
 const requireAuth = require('../middleware/requireAuth');
+const Clinical = require('../models/Clinical');  
+
 
 router.post('/submit', requireAuth, submitClinical);
 router.get('/me', requireAuth, async (req, res) => {
