@@ -262,7 +262,7 @@ const ClinicalQuestionsPage = () => {
       const response = await axios.post('http://localhost:5000/clinical/submit', payload, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
+          'Authorization': `Bearer ${token}`
         },
       
       });

@@ -6,6 +6,12 @@ const ClinicalSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
+  medicalProfile: {
+    age: String,
+    height: String,
+    weight: String,
+    bloodGroup: String
+  },
   bloodTest: {
     hb: String,
     betaHCG1: String,

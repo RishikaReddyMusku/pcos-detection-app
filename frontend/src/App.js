@@ -36,6 +36,7 @@ function App() {
 <Route path="/clinical-questions" element={<RequireAuth><ClinicalQuestionsPage /></RequireAuth>} />
 
   <Route path="/articles" element={<Articlespage />}/>
+
         </Routes>
       </Router>
     </UserProvider>
