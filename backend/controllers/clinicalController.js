@@ -3,7 +3,7 @@ const Clinical = require('../models/Clinical');
 
 exports.submitClinical = async (req, res) => {
   const userId = req.user.id;
-  const { bloodTest, reproductiveHealth, bodyMetrics,lifestyleAndSymptoms } = req.body;
+  const { medicalProfile,bloodTest, reproductiveHealth, bodyMetrics,lifestyleAndSymptoms } = req.body;
 
   try {
     // ✅ Remove any previous clinical data for the user
@@ -12,6 +12,7 @@ exports.submitClinical = async (req, res) => {
     // ✅ Save new clinical entry
     const clinical = new Clinical({
       userId,
+      medicalProfile,
       bloodTest,
       reproductiveHealth,
       bodyMetrics,
