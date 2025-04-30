@@ -33,12 +33,12 @@ const UploadDataPage = () => {
             <p>Use AI to detect PCOS by uploading your ovarian ultrasound image.</p>
           </div>
 
-          <div className="option-card" onClick={() => navigate('/clinical-questions')}>
+          {/* <div className="option-card" onClick={() => navigate('/clinical-questions')}>
             <h3>
               <FaClipboardList className="icon blue-icon" /> Answer Clinical Questions
             </h3>
             <p>Let our AI analyze your symptoms and medical inputs to detect PCOS.</p>
-          </div>
+          </div> */}
         </div>
 
       </div>
