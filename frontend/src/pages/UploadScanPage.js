@@ -259,10 +259,10 @@ const ClinicalQuestionsPage = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:5000/clinical/submit', payload, {
+      const response = await axios.post('http://127.0.0.1:5000/clinical/submit', payload, {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+          Authorization: `Bearer ${token}`
         },
       
       });
