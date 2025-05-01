@@ -55,10 +55,7 @@ const SymptomsPage = () => {
         </div>
       </div>
 
-      <div className="sectionchecker">
-        <h2>Want to know if your symptoms match PCOS?</h2>
-        <button className="check-btn" onClick={handleCheckSymptoms}>Check My Symptoms</button>
-      </div>
+      
     </div>
   );
 };

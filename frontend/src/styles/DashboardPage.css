@@ -1,3 +1,4 @@
+
 .dashboard-container {
   display: flex;
   flex-direction: column;
@@ -16,6 +17,11 @@
   padding: 0 1rem;
   font-size: 3.0rem;
   font-weight: bold;
+}
+.high p{
+  font-weight: 600;
+  color:rgb(83, 79, 79);
+  
 }
 
 .navbar-center {
@@ -50,43 +56,61 @@
   cursor: pointer;
   position: static; /* removes absolute positioning */
 }
-
-
-/* Sidebar styles */
 .sidebar {
-  position: fixed;   /* Keeps the sidebar fixed in place */
-  top: 0;         /* Aligns it to the top of the page (adjusted for navbar height) */
+  position: fixed;
+  top: 0;
   left: 0;
-  height: 100vh;     /* Full viewport height */
-  width: 240px;      /* Sidebar width */
-  background: linear-gradient(to bottom right, #f8bbd0, #f8bbd0); /* Sidebar background */
-  padding: 30px 20px;
+  height: 100vh;
+  width: 260px;
+  background-color: #fde4ec; /* Soft pink */
+  padding: 30px 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  z-index: 100;      /* Ensures the sidebar stays on top of other content */
-  transition: transform 0.3s ease; /* Transition for opening and closing */
-  overflow-y: auto;  /* Enables scrolling within the sidebar */
+  gap: 18px;
+  z-index: 100;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Sidebar links styles */
+/* Close icon */
+.sidebar-close {
+  align-self:flex-start;
+  font-size: 20px;
+  font-weight: bold;
+  color: #880e4f;
+  cursor: pointer;
+  padding: 4px 10px;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-close:hover {
+  transform: scale(1.2);
+}
+
+/* Sidebar links */
 .sidebar a {
   text-decoration: none;
   font-size: 1.05rem;
-  font-weight: 600;
-  color: #ad1457;
-  background-color: #fce4ec;
-  padding: 10px 16px;
-  border-radius: 12px;
-  transition: background 0.2s ease, transform 0.2s ease;
+  font-weight: 500;
+  color: #880e4f;
+  padding: 6px 0;
+  border-bottom: 1px solid #f8bbd0;
+  transition: color 0.2s ease;
 }
 
 .sidebar a:hover {
-  background-color: #f8bbd0;
-  transform: translateX(5px);
-  color: #4a148c;
+  color: #880e4f;
 }
 
+/* Footer text */
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #880e4f;
+  padding-top: 20px;
+  border-top: 1px dashed #f8bbd0;
+}
 
 
 .modal-overlay {
@@ -121,6 +145,8 @@
   max-width: 800px;
   margin: 0 auto;
   gap: 2rem;
+  
+  
 }
 
 .info-section h2 {
@@ -225,4 +251,3 @@
 .upload-btn:hover {
   background-color: #e6005c;
 }
-

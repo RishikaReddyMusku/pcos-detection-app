@@ -3,6 +3,7 @@ import React, { useState ,useEffect} from 'react';
 import axios from '../api/axios';
 import '../styles/UploadScanPage.css';
 import '../styles/ClinicalQuestionsPage.css';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -109,6 +110,8 @@ const ClinicalQuestionsPage = () => {
   const [prediction, setPrediction] = useState(null);
   //const [confidence, setConfidence] = useState(null);
   const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+  
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -118,6 +121,9 @@ const ClinicalQuestionsPage = () => {
       setPrediction(null); // reset on new upload
       //setConfidence(null);
     }
+  };
+  const handleresult = () => {
+    navigate('/final-result');
   };
 
   const handleUpload = async () => {
@@ -130,6 +136,8 @@ const ClinicalQuestionsPage = () => {
     formData.append('file', scan);
     const formData1=new FormData();
     formData1.append('scan',scan);
+  
+    
     try {
       await axios.post('/scan/upload', formData1);
       alert('Scan uploaded successfully!');
@@ -143,9 +151,10 @@ const ClinicalQuestionsPage = () => {
      
 
       // Get prediction from the response
-      const { prediction, confidence } = response.data;
+      const { prediction } = response.data;
 
       setPrediction(prediction === 0 ? 'PCOS Detected' : 'Normal');
+      localStorage.setItem('scanResult',prediction);
       //setConfidence((confidence * 100).toFixed(2)); // Convert to %
     } catch (err) {
       console.error('Upload failed:', err);
@@ -153,6 +162,8 @@ const ClinicalQuestionsPage = () => {
     } finally {
       setLoading(false);
     }
+    
+    
   };
 
   // return (
@@ -182,21 +193,7 @@ const ClinicalQuestionsPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const ResultMessage = () => {
-    let message = '';
-  
-    if (prediction === 'PCOS Detected' && prediction1 === 1) {
-      message = '⚠️ PCOS Detected. Both clinical and ultrasound indicators suggest PCOS. Please consult a gynecologist.';
-    } else if (prediction === 'PCOS Detected' && prediction1 === 0) {
-      message = '⚠️ Ultrasound scan suggests PCOS, but clinical signs are absent. Further evaluation recommended. ';
-    } else if (prediction === 'Normal' && prediction1 === 1) {
-      message = '⚠️ Clinical signs of PCOS detected, but ultrasound is normal. Consult a gynecologist for further tests.';
-    } else if (prediction === 'Normal' && prediction1 === 0) {
-      message = '✅ No signs of PCOS detected in both clinical and ultrasound analysis. You appear to be healthy.';
-    }
-   return message;
-    
-  };
+ 
   
 
   const handleSubmit = async (e) => {
@@ -267,16 +264,27 @@ const ClinicalQuestionsPage = () => {
       
       });
       
+   
 
+   
       alert('Data submitted successfully!');
       setPrediction1(response.data.pcos_prediction);
       console.log(prediction1);
       console.log(prediction);
+      if (response.data.pcos_prediction === 1) {
+        console.log("Clinical Result: PCOS Detected");
+        localStorage.setItem("clinicalResult", "1");
+      } else {
+        console.log("Clinical Result: Not Detected");
+        localStorage.setItem("clinicalResult", "0");
+      }
+      
+  
       console.log("Full API response:", response.data);
 
       console.log("Raw response from API:", response.data.pcos_prediction);
 
-      
+      navigate('/final-result');
     } catch (err) {
       console.error(err);
       alert('Something went wrong. Please try again.');
@@ -339,14 +347,14 @@ const ClinicalQuestionsPage = () => {
       )}
 
       <button onClick={handleUpload} disabled={loading}>
-        {loading ? 'Uploading & Predicting...' : 'Upload & Predict'}
+        {loading ? 'Uploading...' : 'Upload '}
       </button>
 
       {/* Display result */}
       {prediction && (
         <div className="result-box">
-          <h3>🔍 Result:</h3>
-          <p><strong>Prediction:</strong> {prediction}</p>
+          
+          <p><strong>Thank you for uploading your scan.Please fill the Clinical and Biomedical fields below.</strong></p>
           
         </div>
       )}
@@ -415,7 +423,7 @@ const ClinicalQuestionsPage = () => {
         </fieldset>
 
         <div className="button-group">
-  <button type="submit" className="submit-btn" >Submit </button>
+  <button type="submit"  className="submit-btn" >Submit </button>
   <button type="button" className="submit-btn" onClick={handleClear}> Clear</button>
   <button type="button" className="hidden-sample-btn" onClick={handleSampleTest}> Sample Test</button>
 </div>
@@ -425,51 +433,7 @@ const ClinicalQuestionsPage = () => {
       </form>
      
 
-      {/* {prediction1 !== null && (
-        <div className={`prediction-container ${prediction1 === 1  ? 'pcos-yes' : 'pcos-no'}`}>
-          <h2 className="prediction-title">Prediction Result</h2>
-          <p className="prediction-message">
-            {prediction1 === 1
-              ? '⚠️ PCOS Detected. Please consult a gynecologist and monitor your health regularly.'
-              : '✅ No signs of PCOS detected. Keep up your healthy lifestyle and regular check-ups!'}
-          </p>
-
-
-        </div>
-       )} */}
-    
- {/* {(prediction !== null || prediction1 !== null) && (
-  <div className={`prediction-container ${
-    (prediction === 0 && prediction1 === 1) ? 'pcos-yes' :
-    (prediction === 0 || prediction1 === 1) ? 'pcos-maybe' :
-    'pcos-no'
-  }`}>
-    <h2 className="prediction-title">Prediction Result</h2>
-    <p className="prediction-message">
-      {(prediction === 'PCOS Detected' && prediction1 === 1)(
-        '⚠️ PCOS Detected. Both clinical and ultrasound indicators suggest PCOS. Please consult a gynecologist.'
-      )}
-      {(prediction === 'PCOS Detected' && prediction1 === 0) && (
-        '🟡 Polycystic ovarian morphology (PCOM) detected on scan, but no clinical signs. Not enough evidence for PCOS. Monitor symptoms and consider medical advice.'
-      )}
-      {(prediction === 'Normal' && prediction1 === 1) && (
-        '⚠️ Clinical signs of PCOS present, but scan appears normal. Further investigation may be required. Please consult a specialist.'
-      )}
-      {(prediction === 'Normal' && prediction1 === 0) && (
-        '✅ No signs of PCOS detected from both clinical data and ultrasound. Keep up the healthy lifestyle and continue regular monitoring.'
-      )}
-    </p>
-  </div>
-)}  */}
- {(prediction !== null && prediction1 !== null) && (
-  <div className={`prediction-container ${ResultMessage().includes("✅") ? "pcos-no" : "pcos-yes"}`}>
-     <h2 className="prediction-title">Prediction Result</h2>
-     <p className="prediction-message">
-     {ResultMessage()}
-     </p>
-   
-  </div>
-)}
+  
 
 
 

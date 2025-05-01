@@ -16,6 +16,10 @@ import SymptomCheckerPage from './pages/SymptomCheckerPage';
 import RequireAuth from './components/RequireAuth';
 import Articlespage from './pages/Articlespage';
 import './App.css';
+import FinalResultPage from './pages/FinalResultPage';
+
+
+
 
 function App() {
   return (
@@ -27,6 +31,7 @@ function App() {
           <Route path="/medical-form" element={<MedicalFormPage />} />
           <Route path="/dashboard" element={<DashboardPage />} /> {/* ✅ Add Dashboard route */}
           <Route path="/symptoms" element={<SymptomsPage />} />
+          <Route path="/final-result" element={<FinalResultPage />} />
   <Route path="/upload" element={<UploadDataPage />} />
   <Route path="/know-more" element={<KnowMorePage />} />
   <Route path="/about" element={<AboutUsPage />} />
