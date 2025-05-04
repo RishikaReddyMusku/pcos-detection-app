@@ -354,7 +354,7 @@ const ClinicalQuestionsPage = () => {
       {prediction && (
         <div className="result-box">
           
-          <p><strong>Thank you for uploading your scan.Please fill the Clinical and Biomedical fields below.</strong></p>
+          <p><strong>Thank you for uploading your scan. Please fill the Clinical and Biomedical fields below.</strong></p>
           
         </div>
       )}

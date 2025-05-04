@@ -19,7 +19,7 @@ const FinalResultPage = () => {
       let suggestions = [];
 
       if (scanResult === '0' && clinicalResult === '1') {
-        title = ' PCOS Likely Detected';
+        title = ' PCOS Detected';
         message = `Your ultrasound scan shows signs of polycystic ovaries, and your symptoms align with PCOS. 
 This suggests a strong possibility of PCOS. Early identification is a positive step towards managing the condition. 
 We encourage you to take action and learn more.`;
@@ -54,7 +54,8 @@ You may be in an early or non-symptomatic phase. It's important to stay proactiv
       } else if (scanResult === '1' && clinicalResult === '1') {
         title = ' Symptoms Present, But Scan is Clear';
         message = `You are experiencing symptoms commonly seen in PCOS, but your scan does not show typical polycystic ovaries. 
-PCOS can sometimes be diagnosed even without visible cysts. A hormone panel may provide more clarity.`;
+Since PCOS can manifest differently in each individual,
+We recommend that you consult a medical professional for a comprehensive diagnosis.`;
 
         suggestions = [
           {
