@@ -85,9 +85,22 @@ const SymptomCheckerPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const result = recommendTestsFromSymptoms(formData);
+  
+    // ✅ Check if any value is 'Y' or cycle is 'I'
+    const concerningValues = Object.values(formData).some(val => val === 'Y' || val === 'I');
+  
+    if (concerningValues) {
+      result.Suggested_Tests.push({
+        icon: "🖥️",
+        name: "Ultrasound Ovarian Scan",
+        tests_included: ["Pelvic Ultrasound"],
+        description: "Checks for the presence of cysts or enlarged ovaries — a key diagnostic step in PCOS."
+      });
+    }
+  
     setRecommendations(result);
   };
-
+  
   const handleClear = () => {
     setFormData({
       cycle: '',

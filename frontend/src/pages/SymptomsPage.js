@@ -52,13 +52,22 @@ const SymptomsPage = () => {
              <strong>Myth:</strong> PCOS is rare.
             <br /> <strong>Fact:</strong> 1 in 10 women worldwide have PCOS.
           </div>
+          <div className="card">
+             <strong>Myth:</strong> PCOS is just a reproductive issue.
+            <br /> <strong>Fact:</strong> PCOS affects more than reproduction—it can impact metabolism & long-term health.
+          </div>
+          <div className="card">
+             <strong>Myth:</strong> Irregular periods are just a normal part of growing up.
+            <br /> <strong>Fact:</strong> Irregular periods that persist may signal a hormonal issue like PCOS.
+          </div>
+          <div className="card">
+             <strong>Myth:</strong> PCOS disappears after menopause.
+            <br /> <strong>Fact:</strong> Symptoms may improve, but hormonal imbalances and metabolic issues can persist
+          </div>
         </div>
       </div>
 
-      <div className="sectionchecker">
-        <h2>Want to know if your symptoms match PCOS?</h2>
-        <button className="check-btn" onClick={handleCheckSymptoms}>Check My Symptoms</button>
-      </div>
+      
     </div>
   );
 };

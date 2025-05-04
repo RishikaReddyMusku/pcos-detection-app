@@ -21,24 +21,19 @@ const UploadDataPage = () => {
           </p>
           <ul>
             <li><FaLock className="icon black-icon" /> All uploads are secure and private.</li>
-            <li><FaCogs className="icon black-icon" /> You can choose your preferred method below.</li>
+            <li><FaCogs className="icon black-icon" /> Your medical data helps us ensure accurate detection and personalized insights</li>
           </ul>
         </div>
 
         <div className="upload-options">
           <div className="option-card" onClick={() => navigate('/upload-scan')}>
             <h3>
-              <FaXRay className="icon blue-icon" /> Upload Ultrasound Scan
+              <FaXRay className="icon blue-icon" /> Upload Your Data
             </h3>
-            <p>Use AI to detect PCOS by uploading your ovarian ultrasound image.</p>
+            <p>Use AI to detect PCOS by uploading your ovarian ultrasound image ,Biomedical test Results and Clinical Questionnaire.</p>
           </div>
 
-          {/* <div className="option-card" onClick={() => navigate('/clinical-questions')}>
-            <h3>
-              <FaClipboardList className="icon blue-icon" /> Answer Clinical Questions
-            </h3>
-            <p>Let our AI analyze your symptoms and medical inputs to detect PCOS.</p>
-          </div> */}
+          
         </div>
 
       </div>
@@ -46,4 +41,4 @@ const UploadDataPage = () => {
   );
 };
 
-export default UploadDataPage;
+export default UploadDataPage

@@ -1,0 +1,99 @@
+/* Make sure the body has a clean background */
+body {
+  background-color: #ffffff;
+}
+
+/* Wrapper for the final result page */
+.final-result-wrapper {
+  max-width: 1200px;
+  margin: 30px auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #4d004d;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.final-result-wrapper h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #800080;
+  margin-bottom: 1rem;
+}
+
+.result-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #660033;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.result-message {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 700px;
+  color: #333;
+  white-space: pre-line;
+}
+
+/* Apply soft pink background specifically to the "Learn More" section */
+.final-result-wrapper .info-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 2rem;
+  background-color: #f8e1f4 !important; /* Force soft pink background */
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+/* Heading inside the Learn More section */
+.final-result-wrapper .info-sections h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #7a0066;
+}
+
+/* List styles for suggestions */
+.final-result-wrapper .suggestion-list {
+  list-style: none;
+  padding: 0;
+}
+
+.final-result-wrapper .suggestion-list li {
+  margin-bottom: 1.8rem;
+}
+
+.final-result-wrapper .suggestion-list h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #99004d;
+}
+
+.final-result-wrapper .suggestion-list p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Link styles for Learn More */
+.final-result-wrapper .info-link {
+  color: #cc0066;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+
+.final-result-wrapper .info-link:hover {
+  text-decoration: underline;
+}
