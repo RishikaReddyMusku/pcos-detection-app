@@ -80,7 +80,7 @@ const DashboardPage = () => {
   <div className="sidebar">
     <div className="sidebar-close" onClick={toggleSidebar} role="button" aria-label="Close sidebar">×</div>
 
-    <Link to="/symptoms">Track Symptoms</Link>
+    <Link to="/symptoms">PCOS Insights</Link>
     <Link to="/articles">Read Articles</Link>
     <Link to="/know-more">Know More</Link>
     <Link to="/about">About Us</Link>

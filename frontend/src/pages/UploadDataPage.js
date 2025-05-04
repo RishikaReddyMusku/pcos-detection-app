@@ -21,7 +21,7 @@ const UploadDataPage = () => {
           </p>
           <ul>
             <li><FaLock className="icon black-icon" /> All uploads are secure and private.</li>
-            <li><FaCogs className="icon black-icon" /> You can choose your preferred method below.</li>
+            <li><FaCogs className="icon black-icon" /> Your medical data helps us ensure accurate detection and personalized insights</li>
           </ul>
         </div>
 
@@ -41,4 +41,4 @@ const UploadDataPage = () => {
   );
 };
 
-export default UploadDataPage;
+export default UploadDataPage

@@ -42,7 +42,7 @@ const ClinicalQuestionsPage = () => {
         betaHCG2: formData.betaHCG2,
         fsh: formData.fsh,
         lh: formData.lh,
-        fshLhRatio: formData.fshLhRatio,
+        fshLhRatio: (formData.fsh/formData.lh).toFixed(2),
         tsh: formData.tsh,
         amh: formData.amh,
         prl: formData.prl,
@@ -58,10 +58,10 @@ const ClinicalQuestionsPage = () => {
         abortions: formData.abortions
       },
       bodyMetrics: {
-        bmi: formData.bmi,
+        bmi: (medicalData.weight/((medicalData.height/100) * (medicalData.height/100))).toFixed(2),
         hip: formData.hip,
         waist: formData.waist,
-        waistHipRatio: formData.waistHipRatio,
+        waistHipRatio: (formData.hip/formData.waist).toFixed(2),
         bpSys: formData.bpSys,
         bpDia: formData.bpDia,
         follicleL: formData.follicleL,
