@@ -123,6 +123,11 @@ If you're unsure whether it could be PCOS, our symptom checker helps you underst
           </button>
         </div>
       </div>
+            {/* Footer */}
+      <footer className="dashboard-footer">
+        <p>&copy; {new Date().getFullYear()} PCOS Detection Platform. All rights reserved.</p>
+      </footer>
+
     </div>
   );
 };
