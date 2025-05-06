@@ -1,6 +1,8 @@
 /* Make sure the body has a clean background */
 body {
   background-color: #ffffff;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 /* Wrapper for the final result page */
@@ -15,6 +17,7 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Header styles */
 .final-result-wrapper h2 {
   text-align: center;
   font-size: 2rem;
@@ -24,6 +27,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Result Title */
 .result-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -32,6 +36,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Result message */
 .result-message {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -96,4 +101,86 @@ body {
 
 .final-result-wrapper .info-link:hover {
   text-decoration: underline;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 1024px) {
+  .final-result-wrapper {
+    padding: 15px;
+  }
+
+  .result-title {
+    font-size: 1.3rem;
+  }
+
+  .result-message {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .info-sections {
+    padding: 2rem 1.5rem;
+  }
+
+  .info-sections h4 {
+    font-size: 1.1rem;
+  }
+
+  .suggestion-list h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .final-result-wrapper {
+    padding: 10px;
+  }
+
+  .result-title {
+    font-size: 1.1rem;
+  }
+
+  .result-message {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .info-sections {
+    padding: 1.5rem 1rem;
+  }
+
+  .info-sections h4 {
+    font-size: 1rem;
+  }
+
+  .suggestion-list h5 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .final-result-wrapper {
+    padding: 5px;
+  }
+
+  .result-title {
+    font-size: 1rem;
+  }
+
+  .result-message {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .info-sections {
+    padding: 1rem;
+  }
+
+  .info-sections h4 {
+    font-size: 0.9rem;
+  }
+
+  .suggestion-list h5 {
+    font-size: 0.85rem;
+  }
 }
