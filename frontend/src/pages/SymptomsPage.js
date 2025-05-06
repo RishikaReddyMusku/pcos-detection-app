@@ -11,7 +11,8 @@ const SymptomsPage = () => {
   };
 
   return (
-    <div className="symptoms-wrapper" style={{ backgroundImage: `url(${backgroundImg})` }}>
+    <div>
+      <div className="symptoms-wrapper" style={{ backgroundImage: `url(${backgroundImg})` }}>
       <div className="section">
         <h1>Common PCOS Symptoms</h1>
         <ul className="symptom-list">
@@ -35,7 +36,10 @@ const SymptomsPage = () => {
           </li>
         </ul>
       </div>
+     
+     <div className-="sectionmyths1">
 
+   
       <div className="sectionmyths">
         <h2>💬 Myths vs Facts</h2>
         <div className="myth-cards">
@@ -64,8 +68,13 @@ const SymptomsPage = () => {
             <p><strong>Fact:</strong> Symptoms may improve, but hormonal imbalances and metabolic issues can persist.</p>
           </div>
         </div>
-      </div>
+        </div>
+        </div>
+      
     </div>
+
+    </div>
+    
   );
 };
 
