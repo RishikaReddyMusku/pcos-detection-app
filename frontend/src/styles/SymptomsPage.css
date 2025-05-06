@@ -8,7 +8,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
 }
 
 /* Section for Symptoms */
@@ -17,8 +17,27 @@
   width: 100%;
   max-width: 900px;
   padding: 20px;
+  margin-left:35%;
+ 
 }
 
+/* Section for Myths with left margin adjustment */
+.sectionmyths {
+  margin-left: 3%; /* 3% of the width of the parent container */
+  margin-right: 40%; /* 30% of the width of the parent container */
+  padding-left: 0;
+  width: 100%; /* Full width */
+  display: flex;
+  flex-direction: column;
+
+   /* Move the myths section slightly to the left */
+}
+.sectionmyths1{
+  margin-left:0%;
+  margin-right:45%;
+}
+
+/* Header styles */
 h1,
 h2 {
   color: #d63384;
@@ -76,6 +95,10 @@ h2 {
     padding: 10px;
   }
 
+  .sectionmyths {
+    margin-left: 0; /* Reset the left margin for small screens */
+  }
+
   .symptom-list li {
     font-size: 1rem;
   }
@@ -97,6 +120,10 @@ h2 {
   .section,
   .sectionmyths {
     padding: 10px;
+  }
+
+  .sectionmyths {
+    margin-left: 0; /* Remove left margin on very small screens */
   }
 
   .myth-cards {

@@ -69,7 +69,7 @@ const MedicalFormPage = () => {
 
   return (
     <div className="medical-form-wrapper" style={{ backgroundImage: `url(${medicalBg})` }}>
-      <div className="container">
+      <div className="container d-flex justify-content-center align-items-center min-vh-100">
         <form className="medical-form" onSubmit={handleSubmit} autoComplete="off">
           <h2>Medical Information</h2>
 
