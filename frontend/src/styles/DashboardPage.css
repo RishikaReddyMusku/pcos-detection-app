@@ -1,5 +1,3 @@
-
-
 .dashboard-container {
   display: flex;
   flex-direction: column;
@@ -10,7 +8,7 @@
 
 .navbar {
   height: 70px;
-  background-color: #f8bbd0; /* soft pink */
+  background-color: #f8bbd0;
   color: white;
   display: flex;
   align-items: center;
@@ -20,24 +18,26 @@
   font-weight: bold;
   margin-bottom: 40px;
 }
-.high p{
+
+.high p {
   font-weight: 600;
-  color:rgb(83, 79, 79);
-  
+  color: rgb(83, 79, 79);
 }
 
 .navbar-center {
-  font-size: 2.2rem; /* 🔥 Bigger font size */
+  font-size: 2.2rem;
   font-weight: bold;
   color: white;
   align-items: center;
 }
+
 .navbar-left {
   cursor: pointer;
   font-size: 2rem;
 }
-.navbar-right{
-  display:flex;
+
+.navbar-right {
+  display: flex;
   align-items: center;
   gap: 10px;
 }
@@ -48,7 +48,6 @@
   cursor: pointer;
 }
 
-/* Logout button style (now no absolute positioning) */
 .logout-button {
   padding: 6px 12px;
   background-color: #d81b60;
@@ -58,15 +57,17 @@
   font-size: 1rem;
   cursor: pointer;
   position: static;
-  margin-right: 1.2rem; /* removes absolute positioning */
+  margin-right: 1.2rem;
 }
+
+/* Sidebar styles */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 260px;
-  background-color: #fde4ec; /* Soft pink */
+  background-color: #fde4ec;
   padding: 30px 24px;
   display: flex;
   flex-direction: column;
@@ -75,11 +76,18 @@
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
   overflow-y: auto;
   font-family: 'Helvetica Neue', sans-serif;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Initially off-screen */
 }
 
-/* Close icon */
+/* Sidebar active class (show on toggle) */
+.sidebar.active {
+  transform: translateX(0); /* Show sidebar */
+}
+
+/* Sidebar close button */
 .sidebar-close {
-  align-self:flex-start;
+  align-self: flex-start;
   font-size: 20px;
   font-weight: bold;
   color: #880e4f;
@@ -107,7 +115,7 @@
   color: #880e4f;
 }
 
-/* Footer text */
+/* Sidebar footer */
 .sidebar-footer {
   margin-top: auto;
   font-size: 0.9rem;
@@ -115,8 +123,6 @@
   padding-top: 20px;
   border-top: 1px dashed #f8bbd0;
 }
-
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -140,7 +146,6 @@
 }
 
 .info-section {
-   /* Adjusted position to move it down */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,12 +153,10 @@
   padding: 4rem 2rem;
   max-width: 800px;
   margin: 0 auto;
-gap:1rem;
+  gap: 1rem;
   background-color: #ffe0ec;
   border-radius: 16px;
   font-weight: 400;
-  
-  
 }
 
 .info-section h2 {
@@ -169,25 +172,23 @@ gap:1rem;
   line-height: 1.6;
 }
 
-.flower-top-right {
+.flower-top-right,
+.flower-bottom-left {
   position: absolute;
-  top: 80px;
-  right: 15px;
   width: 300px;
   height: 300px;
   z-index: 0;
+}
+
+.flower-top-right {
+  top: 80px;
+  right: 15px;
 }
 
 .flower-bottom-left {
-  position: absolute;
   bottom: 20px;
   left: 20px;
-  width: 300px;
-  height: 300px;
-  z-index: 0;
 }
-
-
 
 .vertical-quote {
   position: absolute;
@@ -206,7 +207,6 @@ gap:1rem;
   text-align: center;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  
 }
 
 .left-vertical-quote {
@@ -218,8 +218,6 @@ gap:1rem;
   right: 20px;
   bottom: 120px;
 }
-
-
 
 .pcos-detection-box {
   background-color: #ffe0f0;
@@ -258,7 +256,20 @@ gap:1rem;
 .upload-btn:hover {
   background-color: #e6005c;
 }
-/* General Responsiveness */
+
+.dashboard-footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #666;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+/* --------------- RESPONSIVENESS --------------- */
+
+/* Large Tablets */
 @media (max-width: 1200px) {
   .dashboard-container {
     padding: 0 1rem;
@@ -272,7 +283,8 @@ gap:1rem;
     font-size: 2rem;
   }
 
-  .flower-top-right, .flower-bottom-left {
+  .flower-top-right,
+  .flower-bottom-left {
     width: 250px;
     height: 250px;
   }
@@ -290,20 +302,32 @@ gap:1rem;
   }
 }
 
-/* Tablet and small screen adjustments */
+/* Tablets */
 @media (max-width: 768px) {
   .navbar {
     height: 60px;
     font-size: 2.5rem;
+    flex-wrap: wrap;
   }
 
   .navbar-center {
     font-size: 1.8rem;
   }
 
-  .flower-top-right, .flower-bottom-left {
-    width: 200px;
-    height: 200px;
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .navbar-left {
+    font-size: 1.5rem;
+  }
+
+  .navbar-right .avatar-icon {
+    font-size: 1.8rem;
   }
 
   .info-section {
@@ -318,25 +342,17 @@ gap:1rem;
     font-size: 1rem;
   }
 
-  .sidebar {
-    width: 200px;
-    font-size: 1rem;
+  .flower-top-right,
+  .flower-bottom-left {
+    display: none;
   }
 
-  .navbar-left {
-    font-size: 1.5rem;
-  }
-
-  .navbar-right .avatar-icon {
-    font-size: 1.8rem;
-  }
-
-  .flower-top-right, .flower-bottom-left {
+  .vertical-quote {
     display: none;
   }
 }
 
-/* Mobile view adjustments */
+/* Phones */
 @media (max-width: 480px) {
   .navbar {
     height: 50px;
@@ -352,7 +368,8 @@ gap:1rem;
     width: 180px;
   }
 
-  .navbar-left, .navbar-right {
+  .navbar-left,
+  .navbar-right {
     font-size: 1.5rem;
   }
 
@@ -377,39 +394,43 @@ gap:1rem;
     font-size: 0.9rem;
   }
 
+  .sidebar a {
+    font-size: 1rem;
+  }
+
+  .sidebar-close {
+    font-size: 18px;
+  }
+
   .vertical-quote {
     font-size: 1rem;
     width: 160px;
     height: 50vh;
   }
 
-  .flower-top-right, .flower-bottom-left {
+  .flower-top-right,
+  .flower-bottom-left {
     display: none;
   }
-}
-
-/* Adjust Sidebar links for smaller screens */
-@media (max-width: 480px) {
-  .sidebar a {
-    font-size: 1rem;
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 260px;
+      background-color: #fde4ec;
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      z-index: 100;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+      transform: translateX(-100%); /* Initially off-screen */
+    }
+  
+    .sidebar.active {
+      transform: translateX(0); /* Show sidebar on toggle */
+    }
   }
-
-  .sidebar a:hover {
-    color: #880e4f;
-  }
-
-  .sidebar-close {
-    font-size: 18px;
-  }
 }
-
-.dashboard-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-  color: #666;
-  background-color: #f9f9f9;
-  border-top: 1px solid #ddd;
-  margin-top: 40px;
-}
-

@@ -6,10 +6,15 @@
   align-items: center;
   background-color: #f9fafb;
   color: #333;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: left;
 }
-.about-wrapper h1{
+
+.about-wrapper h1 {
   font-size: 50px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .about-content {
@@ -21,11 +26,12 @@
 
 .about-text {
   padding: 20px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
   font-size: 1.3rem;
 }
-.about-text h2{
+
+.about-text h2 {
   font-family: 'Times New Roman', Times, serif;
   font-weight: 1100;
 }
@@ -44,18 +50,10 @@
   margin-bottom: 30px;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin-bottom: 20px;
   font-size: 2rem;
-}
-
-.intro,
-.mission,
-.pcos-info {
-  font-size: 1.3rem;
-  font-weight: 400; /* lighter than 500 */
-  color: inherit;    /* uses the default text color of the wrapper */
-  line-height: 1.8;
 }
 
 ul.highlights {
@@ -66,15 +64,9 @@ ul.highlights {
 
 ul.highlights li {
   font-size: 1.3rem;
-  font-weight: normal;
-  line-height: 1.6;
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
-  padding: 0;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.8;
 }
-
 
 p {
   font-size: 1.3rem;
@@ -84,10 +76,72 @@ p {
 .thanks {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 400;
-  font-size: 1.4rem; 
-  color: #2c3e50;
-  text-align: center; /* Optional: center the text */
-  margin-top: 30px; 
 }
 
+/* -------------------- RESPONSIVENESS -------------------- */
+@media (max-width: 1024px) {
+  .about-text {
+    font-size: 1.2rem;
+  }
 
+  ul.highlights li {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    padding: 30px 15px;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+  }
+
+  ul.highlights li {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-wrapper {
+    padding: 20px 10px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  ul.highlights li {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-content {
+    padding: 0;
+  }
+}

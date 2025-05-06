@@ -135,6 +135,16 @@ html, body {
   text-align: center;
   font-size: 0.9rem;
 }
+.pink-link {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: bold; 
+}
+
+.pink-link:hover {
+  text-decoration: underline; 
+}
+
 
 @media (max-width: 768px) {
   .landing-container {
@@ -155,5 +165,68 @@ html, body {
   .lottie.large {
     width: 420px;
     height: 420px;
+  }
+}
+@media (max-width: 1024px) {
+  .lottie.large {
+    width: 400px;
+    height: 400px;
+  }
+
+  .description-list {
+    font-size: 1.1rem;
+  }
+
+  .left-panel h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .left-panel, .right-panel {
+    flex: none;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .animations-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .lottie.large {
+    width: 300px;
+    height: 300px;
+  }
+
+  .form-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-panel h1 {
+    font-size: 1.5rem;
+  }
+
+  .description-list {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .form-box {
+    padding: 1.5rem;
   }
 }

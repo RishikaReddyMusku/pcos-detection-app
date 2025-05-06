@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api/axios';
@@ -75,22 +74,14 @@ const DashboardPage = () => {
         <Lottie animationData={girls} loop={true} className="flower-animation" />
       </div>
 
-      
- {showSidebar && (
-  <div className="sidebar">
-    <div className="sidebar-close" onClick={toggleSidebar} role="button" aria-label="Close sidebar">×</div>
-
-    <Link to="/symptoms">PCOS Insights</Link>
-    <Link to="/articles">Read Articles</Link>
-    <Link to="/know-more">Know More</Link>
-    <Link to="/about">About Us</Link>
-
-    
-  </div>
-)}
-
-
-
+      {/* Sidebar */}
+      <div className={`sidebar ${showSidebar ? 'active' : ''}`}>
+        <div className="sidebar-close" onClick={toggleSidebar} role="button" aria-label="Close sidebar">×</div>
+        <Link to="/symptoms">PCOS Insights</Link>
+        <Link to="/articles">Read Articles</Link>
+        <Link to="/know-more">Know More</Link>
+        <Link to="/about">About Us</Link>
+      </div>
 
       {/* Main Info Section */}
       <div className="info-section">
@@ -107,10 +98,11 @@ const DashboardPage = () => {
           This platform aims to empower women with the tools, knowledge, and community support
           to navigate PCOS with strength and clarity.
         </p>
-<div className='high'>
-        <p>➜ Missing your cycle? Experiencing hormonal imbalance, weight fluctuations, or acne?
-If you're unsure whether it could be PCOS, our symptom checker helps you understand your health status.<br></br>
-<a href='/symptom-checker' style={{ color: ' #ad1457', fontSize: '16px' }}  > Check your symptoms to know more</a></p></div>
+        <div className="high">
+          <p>➜ Missing your cycle? Experiencing hormonal imbalance, weight fluctuations, or acne?
+          If you're unsure whether it could be PCOS, our symptom checker helps you understand your health status.<br></br>
+          <a href='/symptom-checker' style={{ color: ' #ad1457', fontSize: '16px' }} > Check your symptoms to know more</a></p>
+        </div>
 
         <div className="pcos-detection-box">
           <h2>Detect PCOS Easily</h2>
@@ -123,11 +115,11 @@ If you're unsure whether it could be PCOS, our symptom checker helps you underst
           </button>
         </div>
       </div>
-            {/* Footer */}
+
+      {/* Footer */}
       <footer className="dashboard-footer">
         <p>&copy; {new Date().getFullYear()} PCOS Detection Platform. All rights reserved.</p>
       </footer>
-
     </div>
   );
 };

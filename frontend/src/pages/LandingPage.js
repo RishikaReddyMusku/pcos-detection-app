@@ -65,8 +65,9 @@ const LandingPage = () => {
           />
           <button type="submit">Sign In</button>
           <p className="link">
-            Don’t have an account? <Link to="/register">Sign up</Link>
-          </p>
+  Don’t have an account? <Link to="/register" className="pink-link">Sign up</Link>
+</p>
+
         </form>
       </div>
     </div>
