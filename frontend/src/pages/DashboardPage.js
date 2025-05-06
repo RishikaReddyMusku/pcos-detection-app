@@ -106,7 +106,7 @@ const DashboardPage = () => {
         <p>
           This platform aims to empower women with the tools, knowledge, and community support
           to navigate PCOS with strength and clarity.
-        </p><br></br>
+        </p>
 <div className='high'>
         <p>➜ Missing your cycle? Experiencing hormonal imbalance, weight fluctuations, or acne?
 If you're unsure whether it could be PCOS, our symptom checker helps you understand your health status.<br></br>
@@ -133,6 +133,3 @@ If you're unsure whether it could be PCOS, our symptom checker helps you underst
 };
 
 export default DashboardPage;
-
-
-

@@ -58,7 +58,6 @@ const MedicalFormPage = () => {
         weight: formData.weight,
         bloodGroup: formData.bloodGroup
       }));
-      
 
       console.log('Form submitted:', response.data);
       navigate('/dashboard');
@@ -70,119 +69,126 @@ const MedicalFormPage = () => {
 
   return (
     <div className="medical-form-wrapper" style={{ backgroundImage: `url(${medicalBg})` }}>
-      <form className="medical-form" onSubmit={handleSubmit} autoComplete="off">
-        <h2>Medical Information</h2>
-        
-        {/* Render form inputs */}
-        {Object.entries(formData).map(([key, value]) => {
-          if (key === 'vaccination' || key === 'reports') {
+      <div className="container">
+        <form className="medical-form" onSubmit={handleSubmit} autoComplete="off">
+          <h2>Medical Information</h2>
+
+          {/* Render form inputs */}
+          {Object.entries(formData).map(([key, value]) => {
+            if (key === 'vaccination' || key === 'reports') {
+              return (
+                <textarea
+                  key={key}
+                  name={key}
+                  placeholder={key.charAt(0).toUpperCase() + key.slice(1)}
+                  value={value}
+                  onChange={handleChange}
+                  rows={3}
+                  className="form-control"
+                />
+              );
+            }
+
+            if (key === 'dob') {
+              return (
+                <input
+                  key={key}
+                  type="date"
+                  name={key}
+                  value={value}
+                  onChange={handleChange}
+                  required
+                  className="form-control"
+                />
+              );
+            }
+
+            if (key === 'age') {
+              return (
+                <input
+                  key={key}
+                  type="text"
+                  name={key}
+                  value={value}
+                  placeholder="Age (Auto-calculated)"
+                  disabled
+                  className="form-control"
+                />
+              );
+            }
+
+            if (key === 'bloodGroup') {
+              return (
+                <select
+                  key={key}
+                  name={key}
+                  value={value}
+                  onChange={handleChange}
+                  required
+                  className="form-control"
+                >
+                  <option value="">Select Blood Group</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                </select>
+              );
+            }
+
+            if (key === 'height') {
+              return (
+                <input
+                  key={key}
+                  type="number"
+                  name={key}
+                  placeholder="Height (in cm)"
+                  value={value}
+                  onChange={handleChange}
+                  required
+                  className="form-control"
+                />
+              );
+            }
+
+            if (key === 'weight') {
+              return (
+                <input
+                  key={key}
+                  type="number"
+                  name={key}
+                  placeholder="Weight"
+                  value={value}
+                  onChange={handleChange}
+                  required
+                  className="form-control"
+                />
+              );
+            }
+
             return (
-              <textarea
+              <input
                 key={key}
+                type={key === 'email' ? 'email' : 'text'}
                 name={key}
                 placeholder={key.charAt(0).toUpperCase() + key.slice(1)}
                 value={value}
                 onChange={handleChange}
-                rows={3}
-              />
-            );
-          }
-
-          if (key === 'dob') {
-            return (
-              <input
-                key={key}
-                type="date"
-                name={key}
-                value={value}
-                onChange={handleChange}
                 required
+                className="form-control"
               />
             );
-          }
+          })}
 
-          if (key === 'age') {
-            return (
-              <input
-                key={key}
-                type="text"
-                name={key}
-                value={value}
-                placeholder="Age (Auto-calculated)"
-                disabled
-              />
-            );
-          }
-
-          
-          if (key === 'bloodGroup') {
-            return (
-              <select
-                key={key}
-                name={key}
-                value={value}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Select Blood Group</option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
-              </select>
-            );
-          }
-
-          if (key === 'height') {
-            return (
-              <input
-                key={key}
-                type="number"
-                name={key}
-                placeholder="Height (in cm)"
-                value={value}
-                onChange={handleChange}
-                required
-              />
-            );
-          }
-
-          if (key === 'weight') {
-            return (
-              <input
-                key={key}
-                type="number"
-                name={key}
-                placeholder="Weight"
-                value={value}
-                onChange={handleChange}
-                required
-              />
-            );
-          }
-
-          return (
-            <input
-              key={key}
-              type={key === 'email' ? 'email' : 'text'}
-              name={key}
-              placeholder={key.charAt(0).toUpperCase() + key.slice(1)}
-              value={value}
-              onChange={handleChange}
-              required
-            />
-          );
-        })}
-
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit" className="btn btn-dark w-100">Submit</button>
+        </form>
+      </div>
     </div>
   );
 };
 
 export default MedicalFormPage;
-
