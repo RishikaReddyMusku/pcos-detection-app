@@ -1,16 +1,12 @@
-/* KnowMorePage.css */
-
 .knowmore-wrapper {
-  padding-top: 80px; /* if navbar is fixed */
+  padding-top: 80px;
   padding-bottom: 50px;
-  background-color: white;
-}
-.knowmore-wrapper {
   font-family: 'Segoe UI', sans-serif;
   color: #222;
+  background-color: white;
 }
 
-.page-title {
+.knowmore-wrapper h1.page-title {
   font-size: 2.4rem;
   margin-bottom: 2rem;
   color: #b03060;
@@ -18,7 +14,7 @@
   text-align: center;
 }
 
-.info-card {
+.knowmore-wrapper .info-card {
   background: #ffe4f2;
   border-left: 6px solid #e75480;
   border-radius: 16px;
@@ -28,30 +24,23 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.info-card h2 {
+.knowmore-wrapper .info-card h2 {
   margin-bottom: 1rem;
   color: #d6336c;
   font-size: 1.6rem;
 }
 
-.info-card p,
-.info-card ul {
+.knowmore-wrapper .info-card p,
+.knowmore-wrapper .info-card ul {
   font-size: 1.1rem;
   line-height: 1.8;
 }
 
-.info-card ul {
+.knowmore-wrapper .info-card ul {
   padding-left: 1.4rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #d63384;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.info-section {
+.knowmore-wrapper .info-section {
   background-color: #ffd6e8;
   border-radius: 20px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
@@ -64,22 +53,22 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-.info-section:hover {
+.knowmore-wrapper .info-section:hover {
   transform: scale(1.02);
 }
 
-.info-section h2 {
+.knowmore-wrapper .info-section h2 {
   font-size: 1.5rem;
   color: #c2185b;
   margin-bottom: 10px;
 }
 
-.info-section ul {
+.knowmore-wrapper .info-section ul {
   list-style-type: disc;
   padding-left: 20px;
 }
 
-.info-section li {
+.knowmore-wrapper .info-section li {
   font-size: 1.1rem;
   margin-bottom: 8px;
 }

@@ -54,8 +54,7 @@ You may be in an early or non-symptomatic phase. It's important to stay proactiv
       } else if (scanResult === '1' && clinicalResult === '1') {
         title = ' Symptoms Present, But Scan is Clear';
         message = `You are experiencing symptoms commonly seen in PCOS, but your scan does not show typical polycystic ovaries. 
-Since PCOS can manifest differently in each individual,
-We recommend that you consult a medical professional for a comprehensive diagnosis.`;
+Since PCOS can manifest differently in each individual,we recommend that you consult a medical professional for a comprehensive diagnosis.`;
 
         suggestions = [
           {

@@ -99,7 +99,9 @@ html, body {
   padding: 2rem;
   background-color: #ffffff;
 }
-
+.right-panel h2{
+  color:palevioletred
+}
 .form-box {
   background:white;
   padding: 2rem;

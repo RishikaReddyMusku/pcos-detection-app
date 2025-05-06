@@ -153,7 +153,7 @@ const UserProfilePage = () => {
 
       {/* Clinical Info */}
       {clinicalData && (
-  <>
+  <><br></br>
     <h2>🧬 Clinical Information</h2>
     <div className="profile-card">
 
