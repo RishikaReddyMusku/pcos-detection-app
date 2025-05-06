@@ -49,6 +49,15 @@ h1, h2 {
   font-size: 2rem;
 }
 
+.intro,
+.mission,
+.pcos-info {
+  font-size: 1.3rem;
+  font-weight: 400; /* lighter than 500 */
+  color: inherit;    /* uses the default text color of the wrapper */
+  line-height: 1.8;
+}
+
 ul.highlights {
   list-style-type: disc;
   padding-left: 25px;
@@ -57,8 +66,13 @@ ul.highlights {
 
 ul.highlights li {
   font-size: 1.3rem;
-  font-weight: 500;
-  line-height: 1.8;
+  font-weight: normal;
+  line-height: 1.6;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
 }
 
 
@@ -68,7 +82,12 @@ p {
 }
 
 .thanks {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight:400;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem; 
+  color: #2c3e50;
+  text-align: center; /* Optional: center the text */
+  margin-top: 30px; 
 }
+
 

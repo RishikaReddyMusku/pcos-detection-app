@@ -12,9 +12,8 @@
   background: rgba(255, 255, 255, 0.95);
   padding: 2.5rem;
   border-radius: 18px;
-  width: 480px;
-  max-height: 90vh; /* 🔥 set max height relative to screen */
-  overflow-y: auto; /* 🔥 enables vertical scroll */
+  width: 100%;
+  max-width: 480px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   scrollbar-width: thin;
 }
@@ -35,9 +34,7 @@
   border-radius: 6px;
 }
 
-.medical-form input,
-.medical-form textarea,
-.medical-form select {
+.medical-form .form-control {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.8rem;
@@ -48,15 +45,6 @@
 
 .medical-form textarea {
   resize: vertical;
-}
-
-.medical-form select {
-  appearance: none; /* Removes default styling */
-  background-color: white;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5H7z" fill="gray"/></svg>'); /* Arrow Icon */
-  background-repeat: no-repeat;
-  background-position: right 10px center; /* Align arrow on the right */
-  padding-right: 30px; /* Space for the arrow */
 }
 
 .medical-form button {
@@ -90,28 +78,17 @@
   border-color: #c084fc;
 }
 
-.medical-form .input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-.medical-form .input-group label {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.medical-form .input-group input,
-.medical-form .input-group select,
-.medical-form .input-group textarea {
-  padding: 0.8rem;
-  font-size: 1rem;
-  border-radius: 10px;
-}
-
 .medical-form select:focus,
 .medical-form input:focus {
   border-color: #ff80b5;
 }
 
+@media (max-width: 768px) {
+  .medical-form {
+    padding: 2rem 1rem;
+  }
+
+  .medical-form h2 {
+    font-size: 1.5rem;
+  }
+}
