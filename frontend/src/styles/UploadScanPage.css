@@ -127,3 +127,93 @@ button:hover {
   height: auto;
   object-fit: contain; /* or "cover" if you want it to fill the box */
 }
+@media (max-width: 1024px) {
+  .upload-scan-container {
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  .upload-scan-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .file-label,
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .result-box p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .upload-scan-container {
+    padding: 1.5rem;
+    margin: 40px auto;
+  }
+
+  .upload-scan-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .file-label,
+  button {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+
+  .result-box {
+    padding: 15px;
+  }
+
+  .result-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .result-box p {
+    font-size: 14px;
+  }
+
+  .preview-box {
+    max-width: 100%;
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-scan-container {
+    padding: 1rem;
+    margin: 30px 10px;
+    border-radius: 16px;
+  }
+
+  .upload-scan-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .file-label,
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .preview-box {
+    max-width: 100%;
+    max-height: 200px;
+  }
+
+  .result-box {
+    padding: 12px;
+  }
+
+  .result-box h3 {
+    font-size: 1rem;
+  }
+
+  .result-box p {
+    font-size: 13px;
+  }
+}
