@@ -1,33 +1,33 @@
-/* Page background - soft pink */
+/* Make the page take full screen with center alignment */
 .register-page {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffe6f0; /* light pastel pink */
+  background-color: #ffe6f0;
+  padding: 20px;
 }
 
-/* Form container - white card */
+/* Container with flexible width */
 .register-container {
- margin-top: 60px;
   background-color: #ffffff;
-  padding: 40px;
+  padding: 30px 25px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 460px;
-  height:450px;
-  display: flex;
+  width: 100%;
+  max-width: 460px;
   text-align: center;
 }
 
-/* Heading */
+/* Form heading */
 .register-container h2 {
-  font-size: 28px;
+  font-size: 34px;
   color: #d63384;
   margin-bottom: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Input styling */
+/* Input fields */
 .register-container input {
   width: 100%;
   padding: 12px 14px;
@@ -54,7 +54,7 @@
   background-color: #bf2c76;
 }
 
-/* Sign-in link */
+/* Link text */
 .register-container p {
   margin-top: 15px;
   font-size: 14px;
@@ -65,4 +65,24 @@
   color: #d63384;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* ✅ Responsive text and spacing for smaller screens */
+@media (max-width: 480px) {
+  .register-container {
+    padding: 20px;
+  }
+
+  .register-container h2 {
+    font-size: 22px;
+  }
+
+  .register-container input,
+  .register-container button {
+    font-size: 14px;
+  }
+
+  .register-container p {
+    font-size: 13px;
+  }
 }

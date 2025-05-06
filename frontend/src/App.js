@@ -17,6 +17,7 @@ import RequireAuth from './components/RequireAuth';
 import Articlespage from './pages/Articlespage';
 import './App.css';
 import FinalResultPage from './pages/FinalResultPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
