@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/SymptomsPage.css';
@@ -41,33 +40,31 @@ const SymptomsPage = () => {
         <h2>💬 Myths vs Facts</h2>
         <div className="myth-cards">
           <div className="card">
-             <strong>Myth:</strong> Only overweight women get PCOS.
-            <br /> <strong>Fact:</strong> PCOS can affect women of all sizes.
+            <p><strong>Myth:</strong> Only overweight women get PCOS.</p> 
+            <p><strong>Fact:</strong> PCOS can affect women of all sizes.</p> 
           </div>
           <div className="card">
-             <strong>Myth:</strong> PCOS means you can’t get pregnant.
-            <br /> <strong>Fact:</strong> Many women with PCOS conceive with treatment.
+             <p><strong>Myth:</strong> PCOS means you can’t get pregnant.</p>
+           <p><strong>Fact:</strong> Many women with PCOS conceive with treatment.</p>
           </div>
           <div className="card">
-             <strong>Myth:</strong> PCOS is rare.
-            <br /> <strong>Fact:</strong> 1 in 10 women worldwide have PCOS.
+            <p><strong>Myth:</strong> PCOS is rare.</p>
+            <p><strong>Fact:</strong> 1 in 10 women worldwide have PCOS.</p>
           </div>
           <div className="card">
-             <strong>Myth:</strong> PCOS is just a reproductive issue.
-            <br /> <strong>Fact:</strong> PCOS affects more than reproduction—it can impact metabolism & long-term health.
+            <p><strong>Myth:</strong> PCOS is just a reproductive issue.</p>
+            <p><strong>Fact:</strong> PCOS affects more than reproduction—it can impact metabolism & long-term health.</p>
           </div>
           <div className="card">
-             <strong>Myth:</strong> Irregular periods are just a normal part of growing up.
-            <br /> <strong>Fact:</strong> Irregular periods that persist may signal a hormonal issue like PCOS.
+            <p><strong>Myth:</strong> Irregular periods are just a normal part of growing up.</p>
+            <p><strong>Fact:</strong> Irregular periods that persist may signal a hormonal issue like PCOS.</p>
           </div>
           <div className="card">
-             <strong>Myth:</strong> PCOS disappears after menopause.
-            <br /> <strong>Fact:</strong> Symptoms may improve, but hormonal imbalances and metabolic issues can persist
+            <p><strong>Myth:</strong> PCOS disappears after menopause.</p>
+            <p><strong>Fact:</strong> Symptoms may improve, but hormonal imbalances and metabolic issues can persist.</p>
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };

@@ -226,3 +226,22 @@ ul li {
   font-size: 0.95rem;
   color: #444;
 }
+
+/* Style for the custom dropdown */
+.cycle-dropdown {
+  position: relative;
+  padding-right: 25px; /* Space for the symbol */
+}
+
+/* Adding the > symbol to the dropdown */
+.cycle-dropdown::after {
+  content: ">";
+  position: absolute;
+  right: 10px; /* Position it inside the select */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #333; /* Dark color for the arrow */
+  pointer-events: none; /* Ensures the arrow doesn't interfere with the dropdown */
+}
+
