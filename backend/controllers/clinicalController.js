@@ -21,7 +21,7 @@ exports.submitClinical = async (req, res) => {
     await clinical.save();
 
     // 2. Forward to ML model for prediction (port 5002)
-    const mlRes = await axios.post('http://127.0.0.1:5002/clinical/submit', {
+    const mlRes = await axios.post('https://clinical-model-api.onrender.com/clinical/submit', {
       medicalProfile,
       bloodTest,
       reproductiveHealth,
