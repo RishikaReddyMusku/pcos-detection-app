@@ -58,6 +58,7 @@ import pickle
 from flask import Flask, request, jsonify
 import numpy as np
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)  # This allows all origins (you can restrict it later)
@@ -135,4 +136,5 @@ def predict_pcos():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True,port=5002)
+    port = int(os.environ.get('PORT', 5002))  # Use dynamic port
+    app.run(debug=True, port=port, host='0.0.0.0')
