@@ -256,7 +256,7 @@ const ClinicalQuestionsPage = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('https://clinical-model-api.onrender.com/clinical/submit', payload, {
+      const response = await axios.post('https://pcos-backend-mu9b.onrender.com/clinical/submit', payload, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`
