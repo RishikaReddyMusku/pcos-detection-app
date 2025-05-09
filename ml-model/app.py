@@ -5,12 +5,9 @@ import numpy as np
 from flask_cors import CORS
 import os
 
-
-
-
-
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/predict": {"origins": "https://pcos-detection-app.vercel.app"}}, supports_credentials=True)
+
 model = tf.keras.models.load_model('model.keras')  # Your uploaded model
 
 def preprocess_image(image_path):
@@ -32,5 +29,5 @@ def predict():
     return jsonify({'prediction': predicted_class, 'confidence': float(np.max(prediction))})
 
 if __name__ == '__main__':
-      port = int(os.environ.get('PORT', 5001))
-      app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get('PORT', 5001))
+    app.run(host='0.0.0.0', port=port)
