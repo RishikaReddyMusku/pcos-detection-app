@@ -6,18 +6,24 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
+
+# Allow specific origin and all methods + headers
 CORS(app, resources={r"/predict": {"origins": "https://pcos-detection-app.vercel.app"}}, supports_credentials=True)
 
-model = tf.keras.models.load_model('model.keras')  # Your uploaded model
+model = tf.keras.models.load_model('model.keras')
 
 def preprocess_image(image_path):
     img = Image.open(image_path).convert('RGB')
-    img = img.resize((224, 224))  # adjust to your model input size
+    img = img.resize((224, 224))
     img_array = np.array(img) / 255.0
     return np.expand_dims(img_array, axis=0)
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST', 'OPTIONS'])  # <-- Add OPTIONS here
 def predict():
+    if request.method == 'OPTIONS':
+        # CORS preflight handling
+        return jsonify({'status': 'ok'}), 200
+
     image_file = request.files['file']
     image_path = f"./temp/{image_file.filename}"
     image_file.save(image_path)
