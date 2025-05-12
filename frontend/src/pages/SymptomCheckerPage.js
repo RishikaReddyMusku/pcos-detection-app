@@ -418,6 +418,15 @@ const SymptomCheckerPage = () => {
         description: "Checks for hormonal imbalances that may cause PCOS symptoms like irregular periods, acne, or hair growth."
       });
     }
+    if(userData.cycle==='I'){
+      rec.Suggested_Tests.push({
+        icon: "🖥️",
+        name: "Ultrasound Ovarian Scan",
+        tests_included: ["Pelvic Ultrasound"],
+        description: "Checks for the presence of cysts or enlarged ovaries — a key diagnostic step in PCOS."
+      });
+
+    }
 
     const thyroidScore = (userData.cycle === 'I' ? 1 : 0) +
                          (userData.weightGain === 'Y' ? 1 : 0) +
@@ -441,6 +450,7 @@ const SymptomCheckerPage = () => {
         tests_included: ["Fasting Glucose", "Fasting Insulin", "OGTT"],
         description: "Detects insulin resistance, which is common in PCOS and affects weight, skin, and ovulation."
       });
+      
     }
 
     // Lifestyle recommendations
@@ -455,6 +465,7 @@ const SymptomCheckerPage = () => {
     if (userData.weightGain === 'Y') {
       rec.Lifestyle_Recommendations.push("🥗 Consult a dietitian for a PCOS-friendly plan to manage weight and hormonal health.");
     }
+    
 
     return rec;
   };
