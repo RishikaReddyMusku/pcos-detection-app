@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
 }
 
 .medical-form {
@@ -14,6 +13,8 @@
   border-radius: 18px;
   width: 100%;
   max-width: 480px;
+  max-height: 90vh; /* Ensure the form doesn't take too much height */
+  overflow-y: auto; /* Add vertical scrolling when content exceeds */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   scrollbar-width: thin;
 }

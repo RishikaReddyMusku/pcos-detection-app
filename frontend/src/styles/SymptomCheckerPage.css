@@ -244,4 +244,51 @@ ul li {
   color: #333; /* Dark color for the arrow */
   pointer-events: none; /* Ensures the arrow doesn't interfere with the dropdown */
 }
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "›"; /* This is U+203A, a single right-pointing angle quote */
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg); /* Rotate it downward */
+  pointer-events: none;
+  font-size: 2rem;
+  color: #333;
+}
+.select-wrapper.hide-arrow::after {
+  opacity: 0;
+}
+
+.test-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.test-card {
+  background-color: #fbeff5;
+  padding: 18px;
+  border-left: 6px solid #c2185b;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.test-card:hover {
+  transform: scale(1.02);
+}
+
+.test-card h4 {
+  margin-bottom: 6px;
+  color: #6a1b9a;
+  font-size: 1.1rem;
+}
+
+.test-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
 

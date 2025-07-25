@@ -147,7 +147,7 @@ const ClinicalQuestionsPage = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:5001/predict', formData);
+      const response = await axios.post('https://scan-model-api.onrender.com/predict', formData);
      
 
       // Get prediction from the response
@@ -256,7 +256,7 @@ const ClinicalQuestionsPage = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://127.0.0.1:5000/clinical/submit', payload, {
+      const response = await axios.post('https://pcos-backend-mu9b.onrender.com/clinical/submit', payload, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`

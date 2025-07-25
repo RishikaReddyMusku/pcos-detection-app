@@ -418,6 +418,15 @@ const SymptomCheckerPage = () => {
         description: "Checks for hormonal imbalances that may cause PCOS symptoms like irregular periods, acne, or hair growth."
       });
     }
+    if(userData.cycle==='I'){
+      rec.Suggested_Tests.push({
+        icon: "🖥️",
+        name: "Ultrasound Ovarian Scan",
+        tests_included: ["Pelvic Ultrasound"],
+        description: "Checks for the presence of cysts or enlarged ovaries — a key diagnostic step in PCOS."
+      });
+
+    }
 
     const thyroidScore = (userData.cycle === 'I' ? 1 : 0) +
                          (userData.weightGain === 'Y' ? 1 : 0) +
@@ -441,6 +450,7 @@ const SymptomCheckerPage = () => {
         tests_included: ["Fasting Glucose", "Fasting Insulin", "OGTT"],
         description: "Detects insulin resistance, which is common in PCOS and affects weight, skin, and ovulation."
       });
+      
     }
 
     // Lifestyle recommendations
@@ -455,6 +465,7 @@ const SymptomCheckerPage = () => {
     if (userData.weightGain === 'Y') {
       rec.Lifestyle_Recommendations.push("🥗 Consult a dietitian for a PCOS-friendly plan to manage weight and hormonal health.");
     }
+    
 
     return rec;
   };
@@ -462,20 +473,8 @@ const SymptomCheckerPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const result = recommendTestsFromSymptoms(formData);
-  
-    // ✅ Check if any value is 'Y' or cycle is 'I'
-    const concerningValues = Object.values(formData).some(val => val === 'Y' || val === 'I');
-  
-    if (concerningValues) {
-      result.Suggested_Tests.push({
-        icon: "🖥️",
-        name: "Ultrasound Ovarian Scan",
-        tests_included: ["Pelvic Ultrasound"],
-        description: "Checks for the presence of cysts or enlarged ovaries — a key diagnostic step in PCOS."
-      });
-    }
-  
     setRecommendations(result);
+
   };
 
   const handleClear = () => {
@@ -499,7 +498,7 @@ const SymptomCheckerPage = () => {
         <div className="mb-3">
           <label className="form-label">Menstrual Cycle</label>
           {/* Custom Dropdown */}
-          <div className="dropdown-container">
+          <div className="select-wrapper">
             <select 
               name="cycle" 
               value={formData.cycle} 
@@ -519,17 +518,20 @@ const SymptomCheckerPage = () => {
             <label className="form-label">
               {field.charAt(0).toUpperCase() + field.slice(1).replace(/([A-Z])/g, ' $1')} (Y/N)
             </label>
+            <div className="select-wrapper">
+
             <select name={field} value={formData[field]} onChange={handleChange} className="form-select" required>
               <option value="">--Select--</option>
               <option value="Y">Yes</option>
               <option value="N">No</option>
             </select>
+            </div>
           </div>
         ))}
 
-        <div className="d-flex justify-content-between">
-          <button type="submit" className="btn btn-primary button-container">Submit</button>
-          <button type="button" onClick={handleClear} className="btn btn-secondary button-container">Clear</button>
+        <div className="d-flex justify-content-between button-container">
+          <button type="submit" className="btn btn-primary button">Submit</button>
+          <button type="button" onClick={handleClear} className="btn btn-secondary button">Clear</button>
         </div>
       </form>
 
@@ -537,10 +539,10 @@ const SymptomCheckerPage = () => {
         <div className="recommendations mt-4">
           <h3>🔍 Test Recommendations</h3>
           {recommendations.Suggested_Tests.length > 0 ? (
-            <div className="row">
+            <div className="d-flex flex-column">
               {recommendations.Suggested_Tests.map((test, idx) => (
-                <div className="col-12 col-md-4 mb-3" key={idx}>
-                  <div className="card p-3">
+                <div className="d-flex flex-row mb-3 test-cards" key={idx}>
+                  <div className="card p-3 test-card w-100">
                     <h4>{test.icon} {test.name}</h4>
                     <p>{test.description}</p>
                     <strong>Includes:</strong> <em>{test.tests_included.join(', ')}</em>
@@ -549,18 +551,21 @@ const SymptomCheckerPage = () => {
               ))}
             </div>
           ) : (
+            <div className="card p-3 test-card w-100 ">
             <p>✅ No specific tests recommended based on current symptoms.</p>
+
+              </div>
           )}
 
           {recommendations.Lifestyle_Recommendations.length > 0 && (
-            <>
+            <div className="card p-3 test-card w-100">
               <h3>🌱 Lifestyle Tips</h3>
               <ul>
                 {recommendations.Lifestyle_Recommendations.map((tip, idx) => (
                   <li key={idx}>{tip}</li>
                 ))}
               </ul>
-            </>
+            </div>
           )}
         </div>
       )}
