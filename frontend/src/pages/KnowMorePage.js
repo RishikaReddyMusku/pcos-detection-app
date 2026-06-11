@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/KnowMorePage.css';
-import bg from '../assets/simplepinkbg.jpg';
+
 
 const KnowMorePage = () => {
   return (
@@ -12,7 +12,6 @@ const KnowMorePage = () => {
         alignItems: 'center',
         minHeight: '100vh',
         padding: '2rem',
-        backgroundImage: `url(${bg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
